@@ -18,9 +18,11 @@
         /* İçeriği dikey ve yatay olarak ortalamak için bir container */
         .container {
             display: flex;
+            flex-direction: column;  /* Elemanları dikey olarak sırala */
             justify-content: center; /* Yatayda ortala */
-            align-items: center;    /* Dikeyde ortala */
+            align-items: center;     /* Dikeyde ortala */
             height: 100%;
+            text-align: center;      /* Metinlerin kendi içinde de ortalı olmasını sağla */
         }
 
         /* "ÖRGÜTLEN" metni için stil */
@@ -30,6 +32,18 @@
             text-transform: uppercase; /* Tüm harfleri büyük yapar */
             text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.5); /* Metne gölge efekti */
             letter-spacing: 0.1em; /* Harfler arası boşluk */
+            margin-bottom: 0; /* Altındaki metinle boşluğu azaltmak için */
+        }
+        
+        /* "katıl" metni için stil */
+        p {
+            font-size: 5vw; /* Örgütlen yazısından daha küçük */
+            font-weight: normal;
+            text-transform: uppercase;
+            letter-spacing: 0.2em; /* Harf aralığını biraz daha açabiliriz */
+            color: #cccccc; /* Ana metinden biraz daha soluk bir renk */
+            margin-top: 10px; /* Üstündeki başlıkla arasında biraz boşluk bırak */
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
         }
 
         /* Daha küçük ekranlar için font boyutunu biraz daha yönetilebilir hale getirelim */
@@ -37,12 +51,16 @@
             h1 {
                 font-size: 20vw;
             }
+            p {
+                font-size: 7vw;
+            }
         }
     </style>
 </head>
 <body>
     <div class="container">
         <h1>ÖRGÜTLEN</h1>
+        <p>katıl</p>
     </div>
 </body>
 </html>
