@@ -23,57 +23,58 @@
             align-items: center;     /* Dikeyde ortala */
             height: 100%;
             text-align: center;      /* Metinlerin kendi içinde de ortalı olmasını sağla */
+            padding: 0 20px;         /* Kenarlardan boşluk */
         }
 
         /* "ÖRGÜTLEN" metni için stil */
         h1 {
-            font-size: 15vw; /* Ekran genişliğine göre boyutu ayarlar */
+            font-size: 15vw;
             font-weight: bold;
-            text-transform: uppercase; /* Tüm harfleri büyük yapar */
-            text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.5); /* Metne gölge efekti */
-            letter-spacing: 0.1em; /* Harfler arası boşluk */
-            margin-bottom: 0; /* Altındaki metinle boşluğu azaltmak için */
-        }
-
-        metin {
-            font-size: 7vw;
-            font-weight: bold;
-            text-shadow: 4pc 4px 8px  rgba(0, 0, 0, 0.5) ;
+            text-transform: uppercase;
+            text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.5);
             letter-spacing: 0.1em;
-            margin-bottom: 0;
+            margin: 0;
         }
 
+        /* --- DÜZELTİLMİŞ ARA METİN STİLİ --- */
+        /* 'metin' seçicisi yerine class seçicisi (.ara-metin) kullanıldı */
+        .ara-metin {
+            font-size: 4vw; /* Boyutu daha okunaklı bir değere getirdim */
+            font-weight: normal; /* Kalın olması başlıkla karışabilir, normale çektim */
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            letter-spacing: 0.05em;
+            margin: 20px 0; /* Üst ve alt boşluk eklendi */
+            max-width: 600px; /* Okunabilirlik için maksimum genişlik */
+            line-height: 1.5; /* Satır yüksekliği */
+        }
         
         /* "katıl" linki için stil */
         .katil-link {
-            font-size: 5vw; /* Örgütlen yazısından daha küçük */
+            font-size: 5vw;
             font-weight: normal;
             text-transform: uppercase;
             letter-spacing: 0.2em;
-            color: #cccccc; /* Ana metinden biraz daha soluk bir renk */
-            margin-top: 10px; /* Üstündeki başlıkla arasında biraz boşluk bırak */
-            text-decoration: none; /* Link altındaki çizgiyi kaldır */
+            color: #cccccc;
+            margin-top: 10px;
+            text-decoration: none;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-            transition: color 0.3s, text-decoration 0.3s; /* Geçiş efekti */
+            transition: color 0.3s, text-decoration 0.3s;
         }
 
         /* Fare üzerine gelince linkin stili */
         .katil-link:hover {
-            color: #ffffff; /* Rengi daha parlak yap */
-            text-decoration: underline; /* Altını çiz */
+            color: #ffffff;
+            text-decoration: underline;
         }
 
-        /* Daha küçük ekranlar için font boyutunu biraz daha yönetilebilir hale getirelim */
+        /* Daha küçük ekranlar için font boyutunu yönetme */
         @media (max-width: 768px) {
             h1 {
                 font-size: 20vw;
             }
-
-            metin {
-                font-size: 10vw;
-
+            .ara-metin {
+                font-size: 5vw;
             }
-
             .katil-link {
                 font-size: 7vw;
             }
@@ -83,7 +84,11 @@
 <body>
     <div class="container">
         <h1>ÖRGÜTLEN</h1>
-        <metin> Bu yolda okulumuzda ve ülkemizde yaşanan olaylar için mücadeleyi hepbirlikte omuz omuza örelim </metin>
+        
+        <p class="ara-metin">
+            Bu yolda okulumuzda ve ülkemizde yaşanan olaylar için mücadeleyi hep birlikte omuz omuza örelim
+        </p>
+
         <a href="https://fkf.org.tr/fkfye-katil/" class="katil-link">katıl</a>
     </div>
 </body>
