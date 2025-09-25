@@ -11,7 +11,7 @@
             margin: 0;
             padding: 0;
             background-color: #1a1a1a; /* Koyu arka plan */
-            color: #ff0000; /* kırmızı metin */
+            color: #ffffff; /* Beyaz metin */
             font-family: 'Arial', sans-serif; /* Okunaklı bir font */
         }
 
@@ -35,15 +35,23 @@
             margin-bottom: 0; /* Altındaki metinle boşluğu azaltmak için */
         }
         
-        /* "katıl" metni için stil */
-        p {
+        /* "katıl" linki için stil */
+        .katil-link {
             font-size: 5vw; /* Örgütlen yazısından daha küçük */
             font-weight: normal;
             text-transform: uppercase;
-            letter-spacing: 0.2em; /* Harf aralığını biraz daha açabiliriz */
+            letter-spacing: 0.2em;
             color: #cccccc; /* Ana metinden biraz daha soluk bir renk */
             margin-top: 10px; /* Üstündeki başlıkla arasında biraz boşluk bırak */
+            text-decoration: none; /* Link altındaki çizgiyi kaldır */
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            transition: color 0.3s, text-decoration 0.3s; /* Geçiş efekti */
+        }
+
+        /* Fare üzerine gelince linkin stili */
+        .katil-link:hover {
+            color: #ffffff; /* Rengi daha parlak yap */
+            text-decoration: underline; /* Altını çiz */
         }
 
         /* Daha küçük ekranlar için font boyutunu biraz daha yönetilebilir hale getirelim */
@@ -51,7 +59,7 @@
             h1 {
                 font-size: 20vw;
             }
-            p {
+            .katil-link {
                 font-size: 7vw;
             }
         }
@@ -60,7 +68,7 @@
 <body>
     <div class="container">
         <h1>ÖRGÜTLEN</h1>
-        <p>https://fkf.org.tr/fkfye-katil/</p>
+        <a href="https://fkf.org.tr/fkfye-katil/" class="katil-link">katıl</a>
     </div>
 </body>
 </html>
