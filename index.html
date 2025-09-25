@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Örgütlen</title>
+    <style>
+        /* Sayfanın tamamını kaplamak için temel stiller */
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            background-color: #1a1a1a; /* Koyu arka plan */
+            color: #ffffff; /* Beyaz metin */
+            font-family: 'Arial', sans-serif; /* Okunaklı bir font */
+        }
+
+        /* İçeriği dikey ve yatay olarak ortalamak için bir container */
+        .container {
+            display: flex;
+            justify-content: center; /* Yatayda ortala */
+            align-items: center;    /* Dikeyde ortala */
+            height: 100%;
+        }
+
+        /* "ÖRGÜTLEN" metni için stil */
+        h1 {
+            font-size: 15vw; /* Ekran genişliğine göre boyutu ayarlar */
+            font-weight: bold;
+            text-transform: uppercase; /* Tüm harfleri büyük yapar */
+            text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.5); /* Metne gölge efekti */
+            letter-spacing: 0.1em; /* Harfler arası boşluk */
+        }
+
+        /* Daha küçük ekranlar için font boyutunu biraz daha yönetilebilir hale getirelim */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 20vw;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>ÖRGÜTLEN</h1>
+    </div>
+</body>
+</html>
